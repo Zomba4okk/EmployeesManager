@@ -7,7 +7,7 @@
 
 {% block content %}
 <form method="post" class="form main-box-style">{% csrf_token %}
-    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <p>Вы точно хотите удалить сотрудника "{{ object }}"?</p>
     <input type="submit" value="Confirm">
 </form>
 {% endblock %}
