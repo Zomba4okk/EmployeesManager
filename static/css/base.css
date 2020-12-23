@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-box-style {
+    box-shadow: -4px 4px #646464;
+    background-color: rgb(255, 239, 142);
+}
+
+.button {
+    font-style: italic;
+    font-weight: bolder;
+    transition: background-color 0.7s;
+}
+.button:hover {
+    background-color: rgb(255, 251, 86);
+}
+
+#content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

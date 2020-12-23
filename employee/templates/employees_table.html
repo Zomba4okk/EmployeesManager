@@ -1,0 +1,73 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if employees|length > 0 %}
+        <table class="table main-box-style">
+            <tr>
+                <th>
+                    First name
+                </th>
+                <th>
+                    Last name
+                </th>
+                <th>
+                    Department
+                </th>
+                <th>
+                    Room number
+                </th>
+                <th>
+                    Computer type
+                </th>
+                <th>
+                    Computer model
+                </th>
+                <th>
+                    Purchase date
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for employee in employees %}
+                <tr>
+                    <td>
+                        {{ employee.first_name }}
+                    </td>
+                    <td>
+                        {{ employee.last_name }}
+                    </td>
+                    <td>
+                        {{ employee.department.name }}
+                    </td>
+                    <td>
+                        {{ employee.room.number }}
+                    </td>
+                    <td>
+                        {{ employee.computer.type }}
+                    </td>
+                    <td>
+                        {{ employee.computer.model }}
+                    </td>
+                    <td>
+                        {{ employee.computer.purchase_date }}
+                    </td>
+                    <td class="button">
+                        <a href="{% url 'employee_update' employee.pk %}">
+                            Update
+                        </a>
+                    </td>
+                    <td class="button">
+                        <a href="{% url 'employee_delete' employee.pk %}">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}

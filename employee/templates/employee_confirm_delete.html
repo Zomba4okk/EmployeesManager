@@ -1,0 +1,13 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/form.css" %}">
+{% endblock %}
+
+{% block content %}
+<form method="post" class="form main-box-style">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
+{% endblock %}

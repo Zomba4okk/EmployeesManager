@@ -1,0 +1,31 @@
+#menu {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 3vh;
+}
+
+#menu > a {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    margin-left: 1vw;
+    padding: 1vh;
+
+    font-size: 2.5vh;
+
+    transition: background-color 0.7s;
+}
+#menu > a:first-child {
+    margin-left: 0;
+}
+#menu > a:last-child {
+    margin-left: auto;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Employees Manager</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link rel="stylesheet" href="{% static "css/menu.css" %}">
+    {% block extra_head %}
+    {% endblock %}
+<body>
+<div id="content">
+    {% block menu %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

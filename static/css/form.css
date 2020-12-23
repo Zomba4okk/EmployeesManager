@@ -1,0 +1,21 @@
+.form {
+    box-sizing: border-box;
+    padding: 2vh;
+
+    font-size: 2.2vh;
+}
+
+.form > p:nth-child(2) {
+    margin-top: 0;
+}
+
+.form > input[type=submit] {
+    font-size: 2vh;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background-color: white;
+    border: 1px solid black;
+}
+

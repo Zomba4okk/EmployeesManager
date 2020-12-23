@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <div id="menu">
+        <a href="{% url 'employees_create' %}" class="main-box-style button">
+            Добавить сотрудника
+        </a>
+        <a href="{% url 'employees_list' %}" class="main-box-style button">
+            Список
+        </a>
+        <a href="{% url 'admin:index' %}" class="main-box-style button">
+            Войти
+        </a>
+    </div>
+{% endblock %}

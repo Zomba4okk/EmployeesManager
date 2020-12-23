@@ -1,0 +1,17 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/form.css" %}">
+{% endblock %}
+
+{% block content %}
+<form method="post" class="form main-box-style">{% csrf_token %}
+    {{ form.as_p }}
+    {% if request.path == '/employees/create' %}
+        <input type="submit" value="Создать">
+    {% else %}
+        <input type="submit" value="Обновить">
+    {% endif %}
+</form>
+{% endblock %}
